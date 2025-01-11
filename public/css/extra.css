@@ -1,0 +1,28 @@
+.mynavtext
+{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.mynavtext:hover
+{
+    color: white;
+}
+
+
+
+.navbar-toggler{
+    border-color: #ffffff;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Replace 'rgba(255, 255, 255, 1)' with the desired color */
+  }
+
+.mynav 
+{
+    background-color: rgb(52, 100, 136);
+}
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+

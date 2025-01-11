@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/css/extra.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<h1>Edit Post</h1>
+
+<form action="/updatePost/<%= index %>" method="post" enctype="multipart/form-data">
+    <h1>Change title below: </h1>
+    <input id="fname" name="pheading" value="<%= post.t %>"><br> 
+    <div class="mb-3">
+        <h1>Change Image below:</h1>
+      <input class="form-control" type="file" id="formFile" name="formFile" accept="image/*">
+    </div> 
+    <h1>Change content below: </h1>  
+    <textarea name="pcontent" id="lname"><%= post.c %></textarea>
+    <input type="submit" value="Update">
+  </form>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
