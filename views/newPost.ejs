@@ -5,22 +5,55 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
 
 
-<form action="/submit1" method="post" enctype="multipart/form-data">
 
-  <h1>Enter title below: </h1>
-  <input type="text" id="fname" name="pheading"><br>
+  .mb-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .myfileinput{
+    width: auto;
+  }
+
+  .mysubmit{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    border-radius: 7px; 
+    padding: 0 10px 0 10px;
+    padding: 10px 10px;    
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-size: 1rem;
+    border: 0;
+    margin-top: 40px;
+    width: 150px;
+  }
+  .mysubmit:hover{
+    background-color: white;
+    color: black;
+    border: 2px black solid;
+  }
+
+
+</style>
+
+<form action="/submit1" method="post" enctype="multipart/form-data" style="margin-top: 20px;">
+
+  <h1 class="hNewPost">Enter title below: </h1>
+  <input type="text" id="fname" name="pheading" class="textboxcss" style="margin-top: 20px;"><br>
+  <h1 class="hNewPost" style="margin-top: 20px;">Enter content below: </h1>
+  <textarea name="pcontent" id="lname" class="textareacss" style="margin-top: 20px;"></textarea>
   <div class="mb-3">
-    <label for="formFile" class="form-label">Default file input example</label>
-    <input class="form-control" type="file" id="formFile" name="formFile" accept="image/*">
+    <label for="formFile" class="hNewPost" style="margin-top: 20px;">Click below to Upload Image:</label>
+    <input class="form-control myfileinput" type="file" id="formFile" name="formFile" accept="image/*">
+    <input type="submit" value="Submit ➝" class="mysubmit">
   </div>
 
-  <h1>Enter content below: </h1>
-  
-  <textarea name="pcontent" id="lname"  style="height: 70px; width: auto;"></textarea>
-  <input type="submit" value="Submit">
 </form>
 
 

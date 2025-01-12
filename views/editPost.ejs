@@ -4,16 +4,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    ul{
+        list-style-type: none;
+    }
+
+    .myeditcontainer{
+        border:2px solid black;
+    }
+</style>
+
 
 <% if(allPosts.length > 0){ %>
     <ul>
         <% allPosts.forEach(function (post, index){ %>
             <li>
+                <div class="myeditcontainer"></div>
                 <p><%= post.t %></p>
                 <a href="/editPost/<%= index %>"><button type="button">Edit</button></a>
                 <form action="/deletePost/<%= index %>" method="post">
                     <input type="submit" value="Delete">
                 </form>
+            </div>
             </li>
         <% }); %>
     </ul>
@@ -22,3 +34,4 @@
     <% } %>
 
 
+    <script src="/js/bootstrap.bundle.min.js"></script>

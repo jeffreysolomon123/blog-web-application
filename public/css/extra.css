@@ -12,17 +12,72 @@
 
 
 
+.myviewbutton
+{
+    background-color: black;
+    border: none;
+}
+
+.myviewbutton:hover{
+    background-color: black;
+    text-shadow: 10px 5px 10px #000000;
+}
+
+.card{
+    width: 25rem;
+}
+  
+
 .navbar-toggler{
     border-color: #ffffff;
+    
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Replace 'rgba(255, 255, 255, 1)' with the desired color */
   }
 
-.mynav 
+.mynav  
 {
-    background-color: rgb(52, 100, 136);
+    background-color: rgb(0, 0, 0);
+
 }
+
+.hNewPost{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.textareacss {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 300px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+
+.textboxcss{
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+
+
 
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 

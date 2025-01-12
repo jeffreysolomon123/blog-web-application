@@ -3,27 +3,47 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+<style>
+    h2{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+    text-align: center;
+    margin-top: 300px;
+    }
 
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        margin-top: 20px;
+    }
+</style>
 <% if(allPosts.length > 0){ %>
-    <ul>
-        <% allPosts.forEach(function (post,index){ %>
-            <li>
-                <p><%= post.t %></p>
-                <p><%= post.c %></p>
-                <% if (post.f ==! 'No file ploaded') { %>
-                    <p>No image uploaded</p>         
-                <% } else {  %>
-                    <img src="<%= post.f %>" alt="Uploaded Image">
-                <% } %>   
-                <form action="/viewPost/<%= index %>">
-                    <input type="submit" value="View Post">
-                </form>     
-            </li>
-        <% }); %>
-    </ul>
-    <% } else { %>
-    <h2>Welcome to my Blog application!</h2>
-    <% } %>
+    <div class="container myhomecards">
+        <div class="row">
+            <% allPosts.forEach(function (post, index){ %>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<%= post.f %>" class="card-img-top" alt="..." style="height: 300px; object-fit:cover">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= post.t %> 
+                            </h5>
+                            <a href="/viewPost/<%= index %>" class="btn btn-primary myviewbutton">View Post &#8594</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+<% } else { %>
+<h2>Welcome to my Blog application!</h2>
+<% } %>
 
 
 <script src="/js/bootstrap.bundle.min.js"></script>
