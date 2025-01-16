@@ -2,10 +2,14 @@
   "name": "blog-web-application",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Build step not necessary for this project'"
   },
   "author": "",
   "license": "ISC",
