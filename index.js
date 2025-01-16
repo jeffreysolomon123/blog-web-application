@@ -51,7 +51,7 @@ app.get("/post", (req, res) => {
 
 
 
-
+//submit the upload form
 
 app.post("/submit1", upload.single('formFile'), (req, res) => {
     const title = req.body.pheading;
@@ -62,7 +62,7 @@ app.post("/submit1", upload.single('formFile'), (req, res) => {
     const newPost = {
         t: title,
         c: content,
-        f: file ? '/uploads/' + file.filename : 'No file uploaded',
+        f: file ? '/uploads/' + file.filename : '/uploads/noimage.png',
     };
 
 

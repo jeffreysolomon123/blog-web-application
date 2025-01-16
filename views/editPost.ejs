@@ -9,29 +9,59 @@
         list-style-type: none;
     }
 
+    .body,*{
+        padding: 0;
+        margin: 0;
+    }
+
     .myeditcontainer{
-        border:2px solid black;
+        display: flex;
+        font-family: "Poppins", serif;
+     font-weight: 400;
+    font-style: normal;
+
+    border: 2px solid black;
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: auto;
+    justify-content: space-between;
+    max-width: 700px;
+    padding-right: 10px;
+    }
+
+    .myeditbutton{
+        background-color: black;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 2px;
+        border: none;
+        
     }
 </style>
 
-
-<% if(allPosts.length > 0){ %>
+<div style="margin: 50px auto;
+            max-width: 800px;">
+    <% if(allPosts.length > 0){ %>
     <ul>
         <% allPosts.forEach(function (post, index){ %>
-            <li>
-                <div class="myeditcontainer"></div>
+
+            <li>  
+                <div class="myeditcontainer">
                 <p><%= post.t %></p>
-                <a href="/editPost/<%= index %>"><button type="button">Edit</button></a>
+                <a href="/editPost/<%= index %>"><button type="button" class="myeditbutton">Edit</button></a>
                 <form action="/deletePost/<%= index %>" method="post">
-                    <input type="submit" value="Delete">
-                </form>
+                    <input type="submit" value="Delete" class="myeditbutton">
+                </form> 
             </div>
             </li>
+
         <% }); %>
     </ul>
     <% } else { %>
     <h2>Add post to Edit or Delete!</h2>
     <% } %>
+</div>
 
 
     <script src="/js/bootstrap.bundle.min.js"></script>

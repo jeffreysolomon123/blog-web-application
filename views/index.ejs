@@ -14,13 +14,14 @@
     }
 
     .container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+
+
     }
 
     .card{
         margin-top: 20px;
+        padding: 10px;
     }
 </style>
 <% if(allPosts.length > 0){ %>
@@ -28,7 +29,7 @@
         <div class="row">
             <% allPosts.forEach(function (post, index){ %>
                 <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card" >
                         <img src="<%= post.f %>" class="card-img-top" alt="..." style="height: 300px; object-fit:cover">
                         <div class="card-body">
                             <h5 class="card-title">
