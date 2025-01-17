@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -126,6 +126,6 @@ app.get("/viewPost/:index",(req,res)=>{
     res.render("viewPost.ejs", {post: post});
 });
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
 });
